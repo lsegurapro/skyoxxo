@@ -1,0 +1,59 @@
+{
+    "name": "@procontacto/commons-logger",
+    "version": "2.5.2-beta",
+    "description": "Módulo para logs",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "webpack --env.NODE_ENV=production --config webpack.config.js",
+        "build-dev": "webpack --env.NODE_ENV=development --config webpack.config.js",
+        "start-prod": "npm run build && node ./dist/index.js",
+        "start-dev": "env TZ='America/Argentina/Buenos_Aires' NODE_ENV=development nodemon ./dist/index.js",
+        "test": "mocha -r ts-node/register test/**/*.spec.ts --exit",
+        "prepare": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://bitbucket.org/pickit-integraciones/commons-logger.git"
+    },
+    "publishConfig": {
+        "registry": "https://nexus.pickit.net/repository/commons-logger"
+    },
+    "devDependencies": {
+        "@procontacto/cls-rtracer": "file:../cls-rtracer/",
+        "@types/chai": "^4.2.11",
+        "@types/mocha": "^7.0.2",
+        "@types/node": "^14.14.35",
+        "@types/reflect-metadata": "^0.1.0",
+        "chai": "^4.2.0",
+        "friendly-errors-webpack-plugin": "^1.7.0",
+        "mocha": "^7.1.2",
+        "nodemon": "^2.0.1",
+        "ts-loader": "^6.2.1",
+        "ts-node": "^8.10.1",
+        "tslint": "^5.20.1",
+        "typescript": "^3.8.3",
+        "uglifyjs-webpack-plugin": "^2.0.1",
+        "webpack": "^4.41.2",
+        "webpack-bundle-analyzer": "^3.0.3",
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.9.0",
+        "webpack-hot-middleware": "^2.25.0",
+        "webpack-livereload-plugin": "^2.2.0",
+        "webpack-node-externals": "^1.7.2"
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express-http-context": "^1.2.3",
+        "node-uuid": "^1.4.8",
+        "reflect-metadata": "^0.1.13",
+        "typedi": "^0.8.0",
+        "winston": "^3.2.1"
+    },
+    "files": [
+        "dist",
+        "package.json",
+        "README.md"
+    ],
+    "author": "",
+    "license": "ISC"
+}

@@ -1,0 +1,23 @@
+{
+  "files": ["index.ts"],
+  "include": ["*.ts", "webpack.config.js"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "target": "es6",
+    "experimentalDecorators": true,
+    // "allowJs": true,
+    "outDir": "dist",
+    "rootDir": "",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "removeComments": true,
+    "declaration": true,
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "*": ["node_modules/@types/*", "./server/types/*"]
+    }
+  }
+}
